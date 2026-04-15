@@ -30,6 +30,9 @@ app.use('/api/subscriptions', subscriptionRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
 
 // Error handler
 app.use((err, req, res, next) => {
